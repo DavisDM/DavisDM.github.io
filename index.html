@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +10,18 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 10px;
             background-color: #f7f7f7;
         }
+
         .container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 10px;
             max-width: 100%;
             margin: 0 auto;
         }
+
         .calculator {
             background-color: #fff;
             padding: 10px;
@@ -27,33 +30,29 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: 260px;
+            min-height: 240px;
         }
+
         h1 {
             text-align: center;
-            margin-bottom: 15px;
-            font-size: 22px;
+            font-size: 20px;
             color: #333;
         }
+
         h2 {
-            margin-top: 0;
             font-size: 16px;
             color: #444;
             border-bottom: 2px solid #eee;
             padding-bottom: 5px;
             margin-bottom: 10px;
         }
-        h3 {
-            font-size: 14px;
-            color: #555;
-            margin-bottom: 5px;
-        }
+
         label {
-            display: block;
             font-size: 12px;
             margin-bottom: 3px;
             color: #666;
         }
+
         input[type="number"] {
             width: calc(100% - 10px);
             padding: 5px;
@@ -62,13 +61,11 @@
             border-radius: 4px;
             font-size: 12px;
         }
+
         input[type="checkbox"] {
             margin-right: 5px;
         }
-        .save-checkbox {
-            display: inline-block;
-            margin-top: 5px;
-        }
+
         button {
             width: 100%;
             padding: 8px;
@@ -79,43 +76,45 @@
             font-size: 14px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            margin-top: 5px;
         }
+
         button:hover {
             background-color: #0056b3;
         }
+
         p {
             font-size: 12px;
             color: #333;
             font-weight: bold;
-            margin-top: 5px;
             text-align: center;
         }
-        #debugInfo {
-            margin-top: 20px;
-            text-align: center;
-        }
-        #debugInfo button {
-            margin-right: 10px;
-            margin-top: 10px;
-            padding: 8px 15px;
-            font-size: 14px;
-            background-color: #6c757d;
-            border: none;
-            color: #fff;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        #debugInfo button:hover {
-            background-color: #5a6268;
-        }
-        #localStorageContent {
-            margin-top: 20px;
-            font-size: 12px;
-            color: #333;
-            background-color: #f1f1f1;
-            padding: 10px;
-            border-radius: 4px;
+
+        @media (max-width: 600px) {
+            body {
+                padding: 5px;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+
+            .calculator {
+                padding: 8px;
+                min-height: 200px;
+            }
+
+            h1 {
+                font-size: 18px;
+            }
+
+            h2 {
+                font-size: 14px;
+            }
+
+            button {
+                font-size: 12px;
+            }
         }
     </style>
 </head>
